@@ -1,0 +1,33 @@
+.companyLogo {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .companyLogo img {
+    width: 80%;
+    margin: 20px; }
+
+.jobDetails {
+  width: 80%; }
+
+.lineBreaker {
+  border: 1px solid #ecf0f1; }
+
+.jobDetailsExtrasContainer {
+  padding: 20px 0;
+  display: inline-flex; }
+  .jobDetailsExtrasContainer .jobDetailExtras {
+    color: #999;
+    font-size: 14px;
+    font-weight: 100;
+    margin-right: 15px; }
+  .jobDetailsExtrasContainer a {
+    color: #999;
+    text-decoration: none; }
+  .jobDetailsExtrasContainer .likeJob {
+    cursor: pointer;
+    width: 21px;
+    margin-right: 60px;
+    float: right; }
+    .jobDetailsExtrasContainer .likeJob img {
+      width: 100%; }
