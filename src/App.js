@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { connect } from "react-redux"
 
 import JobList from "./components/jobList/jobList"
+import JobSingleContainer from "./components/jobSingle/jobSingleContainer"
 
 import { fetchJobList } from "./actions/jobActions"
 
@@ -17,7 +18,8 @@ class App extends Component {
   render() {
     return <Router>
       <div>
-        <Route path="/" component={JobList} />
+        <Route exact path="/" component={JobList} />
+        <Route path="/jobPage/:id" component={JobSingleContainer} />
       </div>
     </Router>
   }

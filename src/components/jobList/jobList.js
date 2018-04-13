@@ -3,24 +3,24 @@
  */
 
 import React from "react"
-import { connect } from "react-redux"
+import { connect } from "react-redux"   
 
-import {likeJob} from "../../actions/jobActions"
+import { setActiveJob } from "../../actions/activeJobActions"
 import Node from "../reusable/node/node"
 import "./jobList.css"
 
-const JobList = ({jobs, like}) => 
+const JobList = ({jobs, like, activeJob}) => 
 
 <div className="jobListContainer">
-    {jobs.jobList.map((job, key) => <Node nodeKey={key} key={job.id} job={job} like={like}/>)}
+    {jobs.jobList.map((job, key) => <Node nodeKey={key} key={job.id} job={job} like={like} activeJob={activeJob}/>)}
 </div>
 
 const mapStateToProps = (state) => ({
     jobs : state.jobs
 })
 
-const mapDispatchToProps = dipatch => ({
-    like : jobId => () => dipatch(likeJob(jobId))
+const mapDispatchToProps = dispatch => ({
+    activeJob :jobId => () => dispatch(setActiveJob(jobId))
 })
 
 export default connect(mapStateToProps,mapDispatchToProps)(JobList)

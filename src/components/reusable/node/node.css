@@ -9,6 +9,9 @@
 
 .jobDetails {
   width: 80%; }
+  .jobDetails a {
+    color: #999;
+    text-decoration: none; }
 
 .lineBreaker {
   border: 1px solid #ecf0f1; }
@@ -24,10 +27,3 @@
   .jobDetailsExtrasContainer a {
     color: #999;
     text-decoration: none; }
-  .jobDetailsExtrasContainer .likeJob {
-    cursor: pointer;
-    width: 21px;
-    margin-right: 60px;
-    float: right; }
-    .jobDetailsExtrasContainer .likeJob img {
-      width: 100%; }

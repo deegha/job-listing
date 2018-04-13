@@ -42,10 +42,10 @@ export const jobReducer = (state = initialState, action) => {
                 jobList : action.jobs.map(job => ({...job, liked : false}) ) ,
                 loading : false
             }
-        case  Actions.TOGLE_LIKE_JOB : console.log(action.jobId)
+        case  Actions.TOGLE_LIKE_JOB :
             return {
                 ...state,
-                jobList : state.jobList.map((job, key) => (key === action.jobId)? {...job, liked : !job.liked} : job ),
+                jobList : state.jobList.map((job, key) => (job.id === action.jobId)? {...job, liked : !job.liked} : job ),
             }
         default :
             return state
