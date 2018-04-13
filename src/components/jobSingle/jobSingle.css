@@ -1,2 +1,46 @@
 .wrapperSingleJob {
   padding: 20px; }
+
+.singlePageLike {
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 64px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  top: 3px; }
+
+.singlePageCompanyLogo {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  justify-content: center;
+  border-right: 1px solid #ecf0f1; }
+  .singlePageCompanyLogo img {
+    width: 90%; }
+
+.FloatingBackBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 2;
+  font-size: 53px;
+  cursor: pointer;
+  color: #9b59b6; }
+  .FloatingBackBtn:hover {
+    transform: scale(1.3, 1.3);
+    transition: transform 0.2s ease; }
+
+.FloatingUpBtn {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  z-index: 2;
+  font-size: 53px;
+  cursor: pointer;
+  color: #34495e; }
+  .FloatingUpBtn:hover {
+    transform: scale(1.3, 1.3);
+    transition: transform 0.2s ease; }

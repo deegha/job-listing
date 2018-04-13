@@ -24,17 +24,17 @@ const initialState = {
 
 export const activeJobReducer = (state = initialState, action) => {
     switch(action.type) {
-        case Actions.ACTIVEJOB_REQUEST : console.log("req")
+        case Actions.ACTIVEJOB_REQUEST :
             return {
                 ...state,
                 loading : true  
             }
-        case Actions.ACTIVEJOB_FAIL :console.log("fail")
+        case Actions.ACTIVEJOB_FAIL :
             return {
                 ...state,
                 loading : false
             }
-        case Actions.ACTIVEJOB :console.log("succ   ")
+        case Actions.ACTIVEJOB :
             return {
                 loading :false,
                 job : {...action.job}

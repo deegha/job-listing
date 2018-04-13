@@ -1,3 +1,7 @@
+/**
+ * Created by Deegha on 05/12/2018
+ */
+
 import React from "react"
 
 import Card from "../reusable/card/card"
@@ -9,19 +13,38 @@ import PaddingContainer from "../reusable/paddingContainer/paddingContainer"
 import PageNotFound from "../pageNotFound/pageNotFound"
 import Liked from "../reusable/liked/liked"
 import FelxRow from "../reusable/flexRow/felxRow"
+import JobExtras from "../reusable/jobExtras/jobExtras"
+import { Link } from "react-router-dom"
+import Icon from "../reusable/icon/icon"
 
 import "./jobSingle.css"
 
-const JobSingle = ({activeJob}) => 
+const JobSingle = ({activeJob, scrollToTop}) => 
     activeJob.id ?
     <Container>
+        <Link to="/" className="FloatingBackBtn" >
+            <Icon name="chevron-circle-left"/>
+        </Link>
+        <div className="FloatingUpBtn" onClick={scrollToTop()}>
+            <Icon name="chevron-circle-up" />
+        </div>    
         <Card>
             <div className="wrapperSingleJob">
                 <FelxRow>
-                <H1>{activeJob.title}</H1>
-                <Liked liked={activeJob.liked} nodeKey={activeJob.id} />
+                    <div  className="singlePageCompanyLogo" >
+                        <a href={activeJob.company_url} target="new">
+                            <img src={activeJob.company_logo} alt="logo" />
+                        </a>
+                    </div>
+                    <FelxRow>
+                        {/* <div className="singlePageLike">
+                            <Liked liked={activeJob.liked} nodeKey={activeJob.id} />
+                        </div>   */}
+                        <H1>{activeJob.title}</H1>
+                    </FelxRow>
                 </FelxRow>
                 <PaddingContainer padding="10px">
+                    <JobExtras job={activeJob} />
                     <H2>description</H2>
                         <PaddingContainer padding="20px">
                             <TextHtmlConverter>{activeJob.description}</TextHtmlConverter>
@@ -36,3 +59,6 @@ const JobSingle = ({activeJob}) =>
     </Container>
     :<PageNotFound/>
 export default JobSingle
+
+
+ 

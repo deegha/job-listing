@@ -1,9 +1,14 @@
+/**
+ * Created by Deegha on 05/12/2018
+ */
+
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { connect } from "react-redux"
 
 import JobList from "./components/jobList/jobList"
 import JobSingleContainer from "./components/jobSingle/jobSingleContainer"
+import PageNotFound from "./components/pageNotFound/pageNotFound"
 
 import { fetchJobList } from "./actions/jobActions"
 
@@ -18,8 +23,11 @@ class App extends Component {
   render() {
     return <Router>
       <div>
-        <Route exact path="/" component={JobList} />
-        <Route path="/jobPage/:id" component={JobSingleContainer} />
+        <Switch>
+          <Route exact path="/" component={JobList} />
+          <Route path="/jobPage/:id" component={JobSingleContainer} />
+          <Route component={PageNotFound}/>
+        </Switch>
       </div>
     </Router>
   }

@@ -9,13 +9,8 @@ import JobSingle from "./jobSingle"
 import {setActiveJob} from "../../actions/activeJobActions"
 
 class JobSingleContainer extends React.Component {
-    constructor(props) {
-        super(props)
 
-        this.state = {
-            liked : ""
-        }
-    }
+    scrollToTop = _ => _ => window.scrollTo(0, 0)
     
     componentDidMount() {
         this.props.fetchActiveJob(this.props.match.params.id)
@@ -23,7 +18,7 @@ class JobSingleContainer extends React.Component {
     }
 
     render() { console.log(this.state)
-        return <JobSingle activeJob={this.props.activeJob} />
+        return <JobSingle activeJob={this.props.activeJob} scrollToTop={this.scrollToTop} />
     }
 }
 

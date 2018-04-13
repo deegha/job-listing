@@ -1,5 +1,16 @@
+/**
+ * Created by Deegha on 05/13/2018
+ */
+
 import React from "react"
 
-const PageNotFound = () => <div>Page not found</div>
+import PageNotFoundImage from "../../utils/pageNotFound.png"
+import Container from "../reusable/container/container"
+
+const PageNotFound = () => 
+    <Container>
+        <h1 className="pageNotFoundTitle">404</h1>
+        <img src={PageNotFoundImage} />
+    </Container>
 
 export default PageNotFound

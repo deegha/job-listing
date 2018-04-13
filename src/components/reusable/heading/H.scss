@@ -1,12 +1,16 @@
 .headingMain {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 300;
     color: #444;
     margin: 20px 0;
+    display: flex;
+    align-items: center;
 }
 
 .headingSub {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     margin: 20px 0;
+    display: flex;
+    align-items: center;
 }
