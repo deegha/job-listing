@@ -1,0 +1,16 @@
+.FloatingUpBtn {
+    position: fixed;
+    bottom : 80px;
+    right: 2%;
+    z-index: 2;
+    
+    cursor: pointer;
+    color: #34495e; 
+
+    transition:  font-size .2s ease;
+
+    &:hover {
+        transform: scale(1.1,1.1);
+        transition : transform 0.1s;
+    }
+}

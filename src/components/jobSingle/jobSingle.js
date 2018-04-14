@@ -16,6 +16,7 @@ import FelxRow from "../reusable/flexRow/felxRow"
 import JobExtras from "../reusable/jobExtras/jobExtras"
 import { Link } from "react-router-dom"
 import Icon from "../reusable/icon/icon"
+import ScrollTop from "../reusable/scrollTop/scrollTop"
 
 import "./jobSingle.css"
 
@@ -25,9 +26,7 @@ const JobSingle = ({activeJob, scrollToTop}) =>
         <Link to="/" className="FloatingBackBtn" >
             <Icon name="chevron-circle-left"/>
         </Link>
-        <div className="FloatingUpBtn" onClick={scrollToTop()}>
-            <Icon name="chevron-circle-up" />
-        </div>    
+        <ScrollTop />
         <Card>
             <div className="wrapperSingleJob">
                 <FelxRow>
@@ -37,9 +36,6 @@ const JobSingle = ({activeJob, scrollToTop}) =>
                         </a>
                     </div>
                     <FelxRow>
-                        {/* <div className="singlePageLike">
-                            <Liked liked={activeJob.liked} nodeKey={activeJob.id} />
-                        </div>   */}
                         <H1>{activeJob.title}</H1>
                     </FelxRow>
                 </FelxRow>

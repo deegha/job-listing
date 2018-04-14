@@ -2,5 +2,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  transition: scroll 2s linear; }
+  justify-content: center; }
