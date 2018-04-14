@@ -15,8 +15,13 @@ export const checkStatusAndGetJSON = (fetchResponse) =>
         ? Promise.resolve(fetchResponse).then(response => response.json())
         : Promise.resolve(fetchResponse).then(apiError => apiError.json()).then(error => Promise.reject(error))
 
-const get = (path) => fetch(path, {
+const get = (path) => fetch(baseUrl+path, {
     headers: headers
 }).then(checkStatusAndGetJSON)
 
 export const getJobList = () => Promise.resolve(jobList)
+
+/**
+ * commenting this api call becouse the api does not work
+*/
+// export const getJobList = get("/positions.json?description=react&location=remote")

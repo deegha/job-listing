@@ -26,7 +26,7 @@ class ScrollTop extends React.Component {
         window.removeEventListener('scroll', this.showScrollUp);
     }
 
-    showScrollUp = _=> (window.pageYOffset > 250) ? this.setState({showScrollUp : true}) : this.setState({showScrollUp : false})
+    showScrollUp = _=> (window.pageYOffset > 150) ? this.setState({showScrollUp : true}) : this.setState({showScrollUp : false})
 
     scrollStep () {
         if (window.pageYOffset === 0) {
@@ -36,7 +36,7 @@ class ScrollTop extends React.Component {
     }
       
     scrollToTop = _=> _=> {
-        let intervalId = setInterval(this.scrollStep.bind(this), 16.6)
+        let intervalId = setInterval(this.scrollStep.bind(this), 10)
         this.setState({ intervalId: intervalId });
     }
 
