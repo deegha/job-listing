@@ -1,0 +1,45 @@
+{
+    "notifications" : [{
+        "created_time" : "Wed Mar 28 20:45:21 UTC 2018",
+        "read" : false,
+        "users" : {
+            "main_user" : {
+                "user_name" : "Dayrlism",
+                "profile_picture" : "http://github-jobs.s3.amazonaws.com/960c5c9e-32c8-11e8-8003-2342ca19bfb2.jpg"
+            },
+            "other_users" : [
+                {
+                    "user_name" : "Aundry Lim"
+                },
+                {
+                    "user_name" : "Wayne Rooney"
+                },
+                {
+                    "user_name" : "Jessica Loo"
+                }
+            ]
+        },
+        "notification_text":"recently liked your",
+        "activity" : "liked",
+        "url" : "http://github-jobs.s3.amazonaws.com/post/123342423"
+        
+    },
+    {
+        "created_time" : "Wed Mar 28 20:45:21 UTC 2018",
+        "read" : false,
+        "users" : {
+            "main_user" : {
+                "user_name" : "Dayrlism",
+                "profile_picture" : "http://github-jobs.s3.amazonaws.com/960c5c9e-32c8-11e8-8003-2342ca19bfb2.jpg"
+            },
+            "other_users" : []
+        },
+        "notification_text":"added a",
+        "activity" : "photo",
+        "url" : "http://github-jobs.s3.amazonaws.com/post/123342423"
+        
+    }]
+}
+
+
+ 

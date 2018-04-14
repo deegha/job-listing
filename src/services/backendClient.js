@@ -19,7 +19,11 @@ const get = (path) => fetch(baseUrl+path, {
     headers: headers
 }).then(checkStatusAndGetJSON)
 
-export const getJobList = () => Promise.resolve(jobList)
+export const getJobList = () => new Promise(function(resolve, reject) {
+                                    setTimeout(function() {
+                                    resolve(jobList);
+                                    }, 4000); // Wait 4s 
+                                })
 
 /**
  * commenting this api call becouse the api does not work

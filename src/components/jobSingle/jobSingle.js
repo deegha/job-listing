@@ -11,7 +11,6 @@ import H2 from "../reusable/heading/H2"
 import {TextHtmlConverter}  from "../reusable/text/text"
 import PaddingContainer from "../reusable/paddingContainer/paddingContainer"
 import PageNotFound from "../pageNotFound/pageNotFound"
-import Liked from "../reusable/liked/liked"
 import FelxRow from "../reusable/flexRow/felxRow"
 import JobExtras from "../reusable/jobExtras/jobExtras"
 import { Link } from "react-router-dom"
@@ -25,7 +24,7 @@ const JobSingle = ({activeJob, scrollToTop, toggleModal,showModal}) =>
     activeJob.id ?
     <Container>
         <Modal show={showModal} toggle={toggleModal} >
-            <img src={activeJob.company_logo} />
+            <img src={activeJob.company_logo} alt="logo" />
         </Modal>
 
          <Link to="/" className="FloatingBackBtn" >

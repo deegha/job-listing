@@ -8,6 +8,8 @@ import {connect} from "react-redux"
 import JobSingle from "./jobSingle"
 import {setActiveJob} from "../../actions/activeJobActions"
 
+import Loading from "../reusable/loading/loading"
+
 class JobSingleContainer extends React.Component {
     constructor(props) {
         super(props)
@@ -26,7 +28,7 @@ class JobSingleContainer extends React.Component {
     }
 
     render() { 
-        return <JobSingle
+        return this.props.loading?<Loading />: <JobSingle
                     showModal={this.state.showModal} 
                     activeJob={this.props.activeJob} 
                     scrollToTop={this.scrollToTop} 

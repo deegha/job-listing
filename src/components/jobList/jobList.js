@@ -10,10 +10,13 @@ import Node from "../reusable/node/node"
 import "./jobList.css"
 import ScrollTop from "../reusable/scrollTop/scrollTop"
 
+import Loading from "../reusable/loading/loading"
+
 const JobList = ({jobs, like, activeJob}) => 
 
 <div className="jobListContainer">
-    {jobs.jobList.map((job, key) => <Node nodeKey={key} key={job.id} job={job} like={like} activeJob={activeJob}/>)}
+    {jobs.loading?<Loading/>: jobs.jobList.map((job, key) => 
+        <Node nodeKey={key} key={job.id} job={job} like={like} activeJob={activeJob}/>)}
     <ScrollTop />
 </div>
 
