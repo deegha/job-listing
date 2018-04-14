@@ -6,6 +6,7 @@ This is a test given to me to showcase my knowladge on react js. The idea is to 
 
 ### Propject Setup
 
+- You need npm to run this :) 
 - Clone the project from `https://github.com/deegha/job-listing.git` 
 - Navigate in to the project and run `npm install` to install dependancies
 - Run `npm start` to start the project in port `3000`
@@ -23,4 +24,4 @@ This is a test given to me to showcase my knowladge on react js. The idea is to 
 - Since i have not tested the resulting data obejct from the api im not sure if this data object is similar to my mock object(have to check once the api is up and running).
 - You needed me to show a modal on the screen 3, to see this, 
   - click on read more on a job
-  - once you are on the single job page click on the company logo
+  - once you are on the single job page click on the company logo 
