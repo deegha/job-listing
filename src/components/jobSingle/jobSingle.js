@@ -17,13 +17,18 @@ import JobExtras from "../reusable/jobExtras/jobExtras"
 import { Link } from "react-router-dom"
 import Icon from "../reusable/icon/icon"
 import ScrollTop from "../reusable/scrollTop/scrollTop"
+import Modal from "../reusable/modal/modal"
 
 import "./jobSingle.css"
 
-const JobSingle = ({activeJob, scrollToTop}) => 
+const JobSingle = ({activeJob, scrollToTop, toggleModal,showModal}) => 
     activeJob.id ?
     <Container>
-        <Link to="/" className="FloatingBackBtn" >
+        <Modal show={showModal} toggle={toggleModal} >
+            <img src={activeJob.company_logo} />
+        </Modal>
+
+         <Link to="/" className="FloatingBackBtn" >
             <Icon name="chevron-circle-left"/>
         </Link>
         <ScrollTop />
@@ -31,9 +36,9 @@ const JobSingle = ({activeJob, scrollToTop}) =>
             <div className="wrapperSingleJob">
                 <FelxRow>
                     <div  className="singlePageCompanyLogo" >
-                        <a href={activeJob.company_url} target="new">
+                        <span onClick={toggleModal()}>
                             <img src={activeJob.company_logo} alt="logo" />
-                        </a>
+                        </span>
                     </div>
                     <FelxRow>
                         <H1>{activeJob.title}</H1>
@@ -52,6 +57,7 @@ const JobSingle = ({activeJob, scrollToTop}) =>
                 </PaddingContainer>
             </div>
         </Card>
+       
     </Container>
     :<PageNotFound/>
 export default JobSingle

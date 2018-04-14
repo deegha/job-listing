@@ -9,16 +9,28 @@ import JobSingle from "./jobSingle"
 import {setActiveJob} from "../../actions/activeJobActions"
 
 class JobSingleContainer extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            showModal : false
+        }
+    }
 
     scrollToTop = _ => _ => window.scrollTo(0, 0)
+
+    toggleModal = _=> _=> this.setState({showModal : !this.state.showModal})
     
     componentDidMount() {
         this.props.fetchActiveJob(this.props.match.params.id)
         window.scrollTo(0, 0)
     }
 
-    render() { console.log(this.state)
-        return <JobSingle activeJob={this.props.activeJob} scrollToTop={this.scrollToTop} />
+    render() { 
+        return <JobSingle
+                    showModal={this.state.showModal} 
+                    activeJob={this.props.activeJob} 
+                    scrollToTop={this.scrollToTop} 
+                    toggleModal={this.toggleModal} />
     }
 }
 

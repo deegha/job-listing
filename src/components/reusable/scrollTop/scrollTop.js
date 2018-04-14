@@ -26,7 +26,7 @@ class ScrollTop extends React.Component {
         window.removeEventListener('scroll', this.showScrollUp);
     }
 
-    showScrollUp = _=> (window.pageYOffset > 300) ? this.setState({showScrollUp : true}) : this.setState({showScrollUp : false})
+    showScrollUp = _=> (window.pageYOffset > 250) ? this.setState({showScrollUp : true}) : this.setState({showScrollUp : false})
 
     scrollStep () {
         if (window.pageYOffset === 0) {

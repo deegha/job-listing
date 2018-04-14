@@ -1,21 +1,25 @@
-import React from "react"
-
-import { Link } from 'react-router-dom'
-
-import "./node.css"
-import H1 from "../heading/H1"
-import H2 from "../heading/H2"
-import Text from "../text/text"
 /**
  * Created by Deegha on 05/12/2018
  */
 
+
+import React from "react"
+
+import { Link } from 'react-router-dom'
+
+import H1 from "../heading/H1"
+import H2 from "../heading/H2"
+import Text from "../text/text"
 import Card from "../card/card"
 import FelxRow from "../flexRow/felxRow"
 import JobExtras from "../jobExtras/jobExtras"
+import PaddingContainer from "../paddingContainer/paddingContainer"
+
+import "./node.css"
 
 const Node = ({job, like, nodeKey, activeJob}) => 
     <Card className="wrapper">
+        <PaddingContainer padding="10px">
         <FelxRow>
             <div className="companyLogo">
                 <a href={job.company_url} target="new">
@@ -31,6 +35,7 @@ const Node = ({job, like, nodeKey, activeJob}) =>
                 <JobExtras job={job} />
             </div>
        </FelxRow>
+       </PaddingContainer>
     </Card> 
 
 export default Node
